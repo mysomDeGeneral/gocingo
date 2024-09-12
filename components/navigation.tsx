@@ -17,9 +17,10 @@ export function Navigation() {
   const toggleMenu = () => setMobileMenuOpen(!mobileMenuOpen)
 
   const navItems = [
-    { name: "About Us", href: "#" },
-    { name: "Projects", href: "#" },
-    { name: "Contact Us", href: "#" },
+    { name: "Home", href:"/"},
+    { name: "About Us", href: "/about" },
+    { name: "Projects", href: "/projects" },
+    { name: "Contact Us", href: "/contact" },
   ]
 
   return (
