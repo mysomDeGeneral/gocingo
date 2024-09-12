@@ -79,7 +79,7 @@ export default function ContactUs() {
                 <div>
                     <h2 className="text-2xl font-semibold mb-4">Contact Information</h2>
                     <p className="mb-2">If you have any questions, please feel free to contact us.</p>
-                    <p className="mb-2"><strong>Email:</strong> info@gicingo.com</p>
+                    <p className="mb-2"><strong>Email:</strong> info@gicingo.org</p>
                     <p className="mb-2"><strong>Phone:</strong> +233 54 514 8108</p>
                     <p className="mb-2"><strong>Working Hours:</strong>Monday to Friday, 8:00am - 5:00pm</p>
                     <p className="mb-4"><strong>Address:</strong> Industrial street, Accra, Ghana</p>
