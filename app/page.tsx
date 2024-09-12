@@ -34,7 +34,9 @@ export default function Homepage() {
 
   return (
     <>
-        <section className="container mx-auto px-4 py-12 text-center">
+        <section className="container mx-auto px-4 py-12">
+        <div className="flex flex-col md:flex-row items-center">
+        <div className="md:w-1/2 mb-8 md:mb-0">
           <h1 className="text-4xl md:text-6xl font-bold mb-4">
             Great futures are built with a small charity
           </h1>
@@ -47,8 +49,11 @@ export default function Homepage() {
             </Button>
             <Button size="lg" variant="outline">Learn More</Button>
           </div>
+          </div>
           <div className="md:w-1/2">
-            <Image src="/placeholder.svg" alt="Gocingo Hero Image" width={600} height={400} className="rounded-lg" />
+            <Image src="/gocingo_hero_image.jpg" alt="Gocingo Hero Image" width={600} height={400} className="rounded-lg" />
+          </div>
+          
           </div>
         </section>
 
