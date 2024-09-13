@@ -3,9 +3,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 export default function AboutUs() {
     const team = [
-        { name: 'John Doe', role: 'Executive Director', image: '/images/team/john-doe.jpg' },
-        { name: 'Jane Smith', role: 'Program Manager', image: '/images/team/jane-smith.jpg' },
-        { name: 'Alice Johnson', role: 'Fundraising Coordinator', image: '/images/team/alice-johnson.jpg' },
+        { name: 'John Doe', role: 'Executive Director', image: '/images/johndoe.jpg' },
+        { name: 'Jane Smith', role: 'Program Manager', image: '/images/janesmith.jpg' },
+        { name: 'Alice Johnson', role: 'Fundraising Coordinator', image: '/images/alicejohnson.jpg' },
     ]
 
     return (
@@ -39,7 +39,7 @@ export default function AboutUs() {
                     {team.map((member) => (
                         <Card key={member.name}>
                             <CardHeader>
-                                <Image src={member.image} alt={member.name} width={200} height={200} className="rounded-full, mx-auto mb-4" />
+                                <Image src={member.image} alt={member.name} width={200} height={200} className="rounded-full mx-auto mb-4" />
                                 <CardTitle>{member.name}</CardTitle>
                             </CardHeader>
                             <CardContent>
