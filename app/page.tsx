@@ -18,17 +18,17 @@ export default function Homepage() {
     {
         title: 'Clean Water Initiative',
         description: 'Providing access to clean and safe drinking water in rural communities.',
-        image: '/placeholder.svg',
+        image: '/images/borehole.jpg',
       },
       {
         title: 'Education for All',
         description: 'Building schools and supporting education programs in underserved areas.',
-        image: '/placeholder.svg',
+        image: '/images/school_block.jpg',
       },
       {
         title: 'Sustainable Agriculture',
         description: 'Promoting sustainable farming practices to improve food security and livelihoods.',
-        image: '/placeholder.svg',
+        image: '/images/farmland.jpg',
       },
     ]
 

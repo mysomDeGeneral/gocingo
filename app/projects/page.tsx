@@ -6,32 +6,32 @@ export default function Projects()  {
         {
             title: 'Clean Water Initiative',
             description: 'Providing access to clean and safe drinking water in rural communities.',
-            image: '/placeholder.svg',
+            image: '/images/borehole.jpg',
           },
           {
             title: 'Education for All',
             description: 'Building schools and supporting education programs in underserved areas.',
-            image: '/placeholder.svg',
+            image: '/images/school_block.jpg',
           },
           {
             title: 'Sustainable Agriculture',
             description: 'Promoting sustainable farming practices to improve food security and livelihoods.',
-            image: '/placeholder.svg',
+            image: '/images/farmland.jpg',
           },
           {
             title: 'Healthcare Outreach',
             description: 'Bringing essential healthcare services to remote and underserved populations.',
-            image: '/placeholder.svg',
+            image: '/images/health.jpg',
           },
           {
             title: 'Women Empowerment',
             description: 'Supporting women through skills training and microfinance initiatives.',
-            image: '/placeholder.svg',
+            image: '/images/soapmaking.jpg',
           },
           {
             title: 'Environmental Conservation',
             description: 'Protecting local ecosystems and promoting sustainable resource management.',
-            image: '/placeholder.svg',
+            image: '/images/solar_panels.jpg',
           },
     ]
 
