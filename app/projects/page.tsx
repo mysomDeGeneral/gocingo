@@ -4,6 +4,7 @@ import Image from "next/image"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Project } from "@/data/projects"
 
+
 export default function Projects()  {
     const [projects, setProjects] = useState<Project[]>([]) 
     const [limit] = useState(6);

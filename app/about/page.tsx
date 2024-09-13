@@ -1,6 +1,7 @@
 import Image from "next/image"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
+
 export default function AboutUs() {
     const team = [
         { name: 'John Doe', role: 'Executive Director', image: '/images/johndoe.jpg' },

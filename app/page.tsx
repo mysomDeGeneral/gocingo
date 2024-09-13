@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import Image from "next/image";
 import { Project } from "@/data/projects";
 
+
 export default function Homepage() {
   const [projectCount, setProjectCount] = useState(10)
   const [donationCount, setDonationCount] = useState(1000)
