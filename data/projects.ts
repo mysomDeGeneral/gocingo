@@ -1,4 +1,11 @@
-  [
+  export interface Project {
+    id: number;
+    title: string;
+    description: string;
+    image: string;
+  }
+  
+  const mockProjects: Project[] = [
     {
       "id": 1,
       "title": "Clean Water Initiative",
@@ -36,3 +43,5 @@
       "image": "/images/solar_panels.jpg"
     }
   ]
+
+  export default mockProjects;

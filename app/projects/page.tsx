@@ -1,39 +1,24 @@
+'use client'
+import { useState, useEffect } from "react"
 import Image from "next/image"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Project } from "@/data/projects"
 
 export default function Projects()  {
-    const projects = [
-        {
-            title: 'Clean Water Initiative',
-            description: 'Providing access to clean and safe drinking water in rural communities.',
-            image: '/images/borehole.jpg',
-          },
-          {
-            title: 'Education for All',
-            description: 'Building schools and supporting education programs in underserved areas.',
-            image: '/images/school_block.jpg',
-          },
-          {
-            title: 'Sustainable Agriculture',
-            description: 'Promoting sustainable farming practices to improve food security and livelihoods.',
-            image: '/images/farmland.jpg',
-          },
-          {
-            title: 'Healthcare Outreach',
-            description: 'Bringing essential healthcare services to remote and underserved populations.',
-            image: '/images/health.jpg',
-          },
-          {
-            title: 'Women Empowerment',
-            description: 'Supporting women through skills training and microfinance initiatives.',
-            image: '/images/soapmaking.jpg',
-          },
-          {
-            title: 'Environmental Conservation',
-            description: 'Protecting local ecosystems and promoting sustainable resource management.',
-            image: '/images/solar_panels.jpg',
-          },
-    ]
+    const [projects, setProjects] = useState<Project[]>([]) 
+    const [limit] = useState(6);
+
+    useEffect(() => {
+      async function fetchProjects() {
+        const response = await fetch(`/mockApi/projects?limit=${limit}`);
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data: Project[] = await response.json();
+        setProjects(data);
+      }
+      fetchProjects();
+    }, []);
 
     return (
         <div className="container mx-auto px-4 py-8">

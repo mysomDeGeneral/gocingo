@@ -1,36 +1,36 @@
 'use client'
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
+import { Project } from "@/data/projects";
 
 export default function Homepage() {
   const [projectCount, setProjectCount] = useState(10)
   const [donationCount, setDonationCount] = useState(1000)
+  const [projects, setProjects] = useState<Project[]>([]) 
+  const [limit] = useState(3);
+
 
   const incrementCounts = () => {
     setProjectCount(prev => prev + 1)
     setDonationCount(prev => prev + 100)
   }
 
-  const projects = [
-    {
-        title: 'Clean Water Initiative',
-        description: 'Providing access to clean and safe drinking water in rural communities.',
-        image: '/images/borehole.jpg',
-      },
-      {
-        title: 'Education for All',
-        description: 'Building schools and supporting education programs in underserved areas.',
-        image: '/images/school_block.jpg',
-      },
-      {
-        title: 'Sustainable Agriculture',
-        description: 'Promoting sustainable farming practices to improve food security and livelihoods.',
-        image: '/images/farmland.jpg',
-      },
-    ]
+ 
+  useEffect(() => {
+    async function fetchProjects() {
+      const response = await fetch(`/mockApi/projects?limit=${limit}`);
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      const data: Project[] = await response.json();
+      setProjects(data);
+    }
+    fetchProjects();
+  }, []);
+
 
   return (
     <>
