@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# GOCINGO Website
 
-## Getting Started
+## Description
 
-First, run the development server:
+This is a web project for an NGO, built using Next.js and other technologies like ShadCN and MockAPI. The website dynamically fetches project data, offers SEO optimization, and provides a clean and responsive design.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This website showcases the NGO’s mission, projects, and other information. Users can view ongoing initiatives, donate, and learn more about the organization.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Setup Instructions
+Follow thse steps to run the project locally:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Prerequisites
+- Node.js (v16.x or higher)
+- npm
+  
+### Installation
 
-## Learn More
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/mysomDeGeneral/gocingo.git
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. Navigate to the project directory:
+   ```bash
+   cd  gocingo
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Install dependencies
+    ```bash
+    npm install
+    ```
+   
+### Running the Development server
+   ```sh
+   npm run dev
+   ```
+   The project will be available at `http://localhost:3000`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Building for Production
+   For production
+   ```sh
+   npm run build
+   ```
+   This will create an optimized production build of the site.
 
-## Deploy on Vercel
+### Deploying
+The project is ready to be deployed to platforms like **Vercel** or **Netlify**. You can deploy the site by following the instructions for **Next.js** projects. 
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Mock API Setup
+- The project data is stored in a mock API located at `data/projects.ts`.
+  This is dynamically fetched on the **Projects** and **Home** pages.
+- You can update the project data by modifying the file `data/projects.ts`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## SEO Optimizations
+SEO metadata (title and description) has been added for each page to ensure better search engine visibility.
+
+## Technologies Used
+- **Next.js** - React-based framework for building websites.
+- **ShadCN** - UI component library for styling.
+- **Tailwind CSS** - Utility-first CSS framework for styling.
+- **MockAPI** - Used for dynamically fetching project data.
+
+
