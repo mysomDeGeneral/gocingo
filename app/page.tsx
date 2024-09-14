@@ -35,8 +35,8 @@ export default function Homepage() {
 
   return (
     <>
-        <section className="container mx-auto px-4 py-12">
-        <div className="flex flex-col md:flex-row items-center">
+        <section className="container mx-auto px-4 py-16 md:py-24">
+        <div className="flex flex-col md:flex-row items-center gap-8">
         <div className="md:w-1/2 mb-8 md:mb-0">
           <h1 className="text-4xl md:text-6xl font-bold mb-4">
             Great futures are built with a small charity
@@ -44,11 +44,11 @@ export default function Homepage() {
           <p className="text-xl mb-8 max-w-2xl mx-auto">
           We're dedicated to making a positive impact on the world through sustainable development and community empowerment.
           </p>
-          <div className="flex justify-center space-x-4">
-            <Button size="lg" className="hover:bg-gray-700 hover:text-green-500">
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Button size="lg" className="w-full sm:w-auto">
                <Link href="/contact">Donate Now</Link> 
             </Button>
-            <Button size="lg" variant="outline">Learn More</Button>
+            <Button size="lg" variant="outline" className="w-full sm:w-auto">Learn More</Button>
           </div>
           </div>
           <div className="md:w-1/2">
@@ -58,7 +58,7 @@ export default function Homepage() {
           </div>
         </section>
 
-        <section className="container mx-auto px-4 py-12 mb-16">
+        <section className="container mx-auto px-4 py-16">
           <h2 className="text-3xl font-bold mb-8">Featured Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {projects.map((project) => (
@@ -68,14 +68,16 @@ export default function Homepage() {
                             <CardDescription>{project.description}</CardDescription>
                         </CardHeader>
                         <CardContent>
-                        <Image src={project.image} alt={project.title} width={300} height={200} className="rounded-lg mb-4"/>
+                        <Image src={project.image} alt={project.title} width={300} height={200} className="rounded-lg mb-4 w-full h-48 object-cover"/>
+                        <Button variant="outline" className="w-full mt-2">Learn More</Button>
                         </CardContent>
                     </Card>
                 ))}
             </div>
         </section>
 
-        <section className="container mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        <section className="container mx-auto px-4 py-16">
+          <div className="grid grid-cols-1  md:grid-cols-3 gap-4 max-w-5xl mx-auto">
           <Card className="p-6 bg-green-500 text-white">
             <h3  className="text-2xl font-bold">83%</h3>
             <p className="text-sm">Success rate for campaigns</p>
@@ -92,9 +94,10 @@ export default function Homepage() {
             <p className="text-sm">Start your fundraising campaign</p>
           </Card>
           </Link>
+          </div>
         </section>
 
-        <section className="text-center">
+        <section className="container mx-auto px-4 py-16 text-center">
           <h2 className="text-3xl font-bold mb-8">Our Impact</h2>
           <div className="flex justify-center space-x-16">
             <div>
