@@ -38,9 +38,11 @@ export function Navigation() {
         ))}
       </nav>
       <div className="flex items-center">
+        <Link href="/contact">
       <Button variant="outline" className="hidden md:inline-flex hover:bg-green-500 hover:text-white text-gray-600 dark:text-gray-300 dark:hover:bg-green-600 transition-colors">
         Donate Now
       </Button>
+      </Link>
       <div className="hidden md:block ml-4">
               <ModeToggle />
       </div>
