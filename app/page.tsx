@@ -69,7 +69,7 @@ export default function Homepage() {
                         </CardHeader>
                         <CardContent>
                         <Image src={project.image} alt={project.title} width={300} height={200} className="rounded-lg mb-4 w-full h-48 object-cover"/>
-                        <Button variant="outline" className="w-full mt-2">Learn More</Button>
+                        <Link href="/projects"><Button variant="outline" className="w-full mt-2">Learn More</Button></Link>
                         </CardContent>
                     </Card>
                 ))}
